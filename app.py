@@ -23,7 +23,7 @@ st.set_page_config(page_title="Feedback | Indian Coffee House Ballygunge", layou
 st.markdown("""
     <div style='text-align: center; padding: 10px 0;'>
         <h1 style='font-size: 48px;'>☕ Indian Coffee House Ballygunge</h1>
-        <h3 style='color: #6c757d;'>Your voice makes our brew better! 🍵</h3>
+        <h3 style='color: #6c757d;'>Your love makes our food better! 🍵</h3>
         <hr style='margin-top: 10px; border: 1px solid #ddd;'/>
     </div>
 """, unsafe_allow_html=True)

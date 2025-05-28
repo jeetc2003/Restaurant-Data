@@ -3,7 +3,6 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import json
 from datetime import datetime, date
-import pyperclip
 
 
 # Load credentials from Streamlit secrets
@@ -114,11 +113,11 @@ with st.form("feedback_form"):
 
         st.markdown(f"""
         ---
-        ### 🛠️ Also Join Us on Facebook & Instagram
+        ### 🛠️ Follow us for updates, offers, and behind-the-scenes fun! 
         
-        [FB ▶ Indian Coffee House Ballygunge / Facebook]({fb_url})
+        🔵[**FB** ▶ @Indian Coffee House Ballygunge / Facebook]({fb_url})
 
-        [IG ▶ Indian Coffee House Ballygunge / Instagram]({ig_url})
+        📸[**IG** ▶ @Indian Coffee House Ballygunge / Instagram]({ig_url})
         
         """, unsafe_allow_html=True)
 

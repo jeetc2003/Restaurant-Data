@@ -3,6 +3,8 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import json
 from datetime import datetime, date
+import pyperclip
+
 
 # Load credentials from Streamlit secrets
 creds_dict = json.loads(st.secrets["GOOGLE_SHEET_CREDS"])
@@ -49,6 +51,27 @@ with st.form("feedback_form"):
 
     submit = st.form_submit_button("🚀 Submit Feedback")
 
+    # if submit:
+        # if not name or not phone or not review:
+        #     st.error("⚠️ Please fill out all *required fields.")
+        # elif not (phone.isdigit() and len(phone) == 10):
+        #     st.error("🚫 Phone number must be exactly 10 digits.")
+        # else:
+        #     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        #     data = [
+        #         name,
+        #         phone,
+        #         review,
+        #         str(birthday) if birthday != date.today() else "",
+        #         str(anniversary) if anniversary != date.today() else "",
+        #         frequency if frequency != "Select an option" else "",
+        #         timestamp
+        #     ]
+        #     sheet.append_row(data)
+    #         st.success("🎉 Thank you! Your feedback has been recorded.")
+    #         st.toast("✅ Successfully submitted!", icon="🧾")
+    #         st.balloons()
+        # After form submission and saving
     if submit:
         if not name or not phone or not review:
             st.error("⚠️ Please fill out all *required fields.")
@@ -66,6 +89,24 @@ with st.form("feedback_form"):
                 timestamp
             ]
             sheet.append_row(data)
-            st.success("🎉 Thank you! Your feedback has been recorded.")
-            st.toast("✅ Successfully submitted!", icon="🧾")
-            st.balloons()
+        st.success("🎉 Thank you! Your feedback has been recorded.")
+        st.toast("✅ Successfully submitted!", icon="🧾")
+        st.balloons()
+    
+        review_text = f"{review}"
+        maps_url = "https://www.google.com/maps/place/Indian+Coffee+House+-+Ballygunge/@22.5209252,88.3698169,17z/data=!4m16!1m9!3m8!1s0x3a02770044e15269:0x1b94bfbe13eca3a1!2sIndian+Coffee+House+-+Ballygunge!8m2!3d22.5209252!4d88.3698169!9m1!1b1!16s%2Fg%2F11y4gsq329!3m5!1s0x3a02770044e15269:0x1b94bfbe13eca3a1!8m2!3d22.5209252!4d88.3698169!16s%2Fg%2F11y4gsq329?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D"
+        
+        pyperclip.copy(review_text)  # Copy review to clipboard
+        st.markdown(f"""
+        ---
+        ### 🛠️ Final Step: Publish Your Review
+    
+        1. Click below to open **Indian Coffee House Ballygunge** on Google Maps.  
+        2. Paste (Ctrl+V) your review and rate ⭐⭐⭐⭐⭐.
+        3. Done!
+    
+        [👉 Leave a 5-Star Review on Google Maps]({maps_url})
+    
+        📝 | Your review is copied to clipboard for your convenience.|
+        """, unsafe_allow_html=True)
+

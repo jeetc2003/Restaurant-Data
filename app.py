@@ -104,7 +104,7 @@ with st.form("feedback_form"):
         2. Copy the text below and paste it as your review.
         3. Rate ⭐⭐⭐⭐⭐ and submit!
         
-        [📍 Indian Coffee House Ballygunge / MAPS]({maps_url})
+       📍 [**GMAPS** ▶    Indian Coffee House Ballygunge / MAPS]({maps_url})
         
         📝 *Copy this review:*
         """, unsafe_allow_html=True)
@@ -115,9 +115,9 @@ with st.form("feedback_form"):
         ---
         ### 🛠️ Follow us for updates, offers, and behind-the-scenes fun! 
         
-        🔵[**FB** ▶ @Indian Coffee House Ballygunge / Facebook]({fb_url})
+        🔵[**FB** ▶    @Indian Coffee House Ballygunge / Facebook]({fb_url})
 
-        📸[**IG** ▶ @Indian Coffee House Ballygunge / Instagram]({ig_url})
+        📸[**IG** ▶    @Indian Coffee House Ballygunge / Instagram]({ig_url})
         
         """, unsafe_allow_html=True)
 

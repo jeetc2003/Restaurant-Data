@@ -1,5 +1,4 @@
 streamlit
 gspread
 oauth2client
-streamlit-authenticator
-google-auth-oauthlib
+pyperclip

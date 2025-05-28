@@ -95,18 +95,18 @@ with st.form("feedback_form"):
     
         review_text = f"{review}"
         maps_url = "https://www.google.com/maps/place/Indian+Coffee+House+-+Ballygunge/@22.5209252,88.3698169,17z/data=!4m16!1m9!3m8!1s0x3a02770044e15269:0x1b94bfbe13eca3a1!2sIndian+Coffee+House+-+Ballygunge!8m2!3d22.5209252!4d88.3698169!9m1!1b1!16s%2Fg%2F11y4gsq329!3m5!1s0x3a02770044e15269:0x1b94bfbe13eca3a1!8m2!3d22.5209252!4d88.3698169!16s%2Fg%2F11y4gsq329?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D"
-        
-        pyperclip.copy(review_text)  # Copy review to clipboard
         st.markdown(f"""
         ---
         ### 🛠️ Final Step: Publish Your Review
-    
-        1. Click below to open **Indian Coffee House Ballygunge** on Google Maps.  
-        2. Paste (Ctrl+V) your review and rate ⭐⭐⭐⭐⭐.
-        3. Done!
-    
+        
+        1. Click the button below to open **Indian Coffee House Ballygunge** on Google Maps.  
+        2. Copy the text below and paste it as your review.
+        3. Rate ⭐⭐⭐⭐⭐ and submit!
+        
         [👉 Leave a 5-Star Review on Google Maps]({maps_url})
-    
-        📝 | Your review is copied to clipboard for your convenience.|
+        
+        📝 *Copy this review:*
         """, unsafe_allow_html=True)
+        
+        st.code(review_text, language="text")
 

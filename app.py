@@ -94,7 +94,7 @@ with st.form("feedback_form"):
         st.balloons()
     
         review_text = f"{review}"
-        maps_url = "https://www.google.com/maps/place/Indian+Coffee+House+-+Ballygunge/@22.5209252,88.3698169,17z/data=!4m16!1m9!3m8!1s0x3a02770044e15269:0x1b94bfbe13eca3a1!2sIndian+Coffee+House+-+Ballygunge!8m2!3d22.5209252!4d88.3698169!9m1!1b1!16s%2Fg%2F11y4gsq329!3m5!1s0x3a02770044e15269:0x1b94bfbe13eca3a1!8m2!3d22.5209252!4d88.3698169!16s%2Fg%2F11y4gsq329?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D"
+        maps_url = "https://www.google.com/maps/place/Indian+Coffee+House+-+Ballygunge/@22.5209252,88.3698169,17z/data=!4m18!1m9!3m8!1s0x3a02770044e15269:0x1b94bfbe13eca3a1!2sIndian+Coffee+House+-+Ballygunge!8m2!3d22.5209252!4d88.3698169!9m1!1b1!16s%2Fg%2F11y4gsq329!3m7!1s0x3a02770044e15269:0x1b94bfbe13eca3a1!8m2!3d22.5209252!4d88.3698169!9m1!1b1!16s%2Fg%2F11y4gsq329?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D"
         st.markdown(f"""
         ---
         ### 🛠️ Final Step: Publish Your Review

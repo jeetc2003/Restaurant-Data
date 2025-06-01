@@ -72,7 +72,7 @@ with st.form("feedback_form"):
     #         st.balloons()
         # After form submission and saving
     if submit:
-        if not name or not phone or not review:
+        if not phone:
             st.error("⚠️ Please fill out all *required fields.")
         elif not (phone.isdigit() and len(phone) == 10):
             st.error("🚫 Phone number must be exactly 10 digits.")

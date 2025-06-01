@@ -22,10 +22,10 @@ st.set_page_config(page_title="Feedback | Indian Coffee House Ballygunge", layou
 
 # Header
 st.markdown("""
-    <div style='text-align: center; padding: 10px 0;'>
+    <div style='text-align: center; padding: 0px 0;'>
         <h2 style='font-size: 36px;'>☕ Indian Coffee House Ballygunge</h2>
-        <h4 style='color: #6c757d;'>Your love makes our food better! 🍵</h4>
-        <hr style='margin-top: 10px; border: 1px solid #ddd;'/>
+        <h5 style='color: #6c757d;'>Your love makes our food better! 🍵</h5>
+        <hr style='margin-top: 5px; border: 1px solid #ddd;'/>
     </div>
 """, unsafe_allow_html=True)
 
